@@ -74,7 +74,7 @@ export default function Technologies() {
               "Don't trust, <span className="text-gradient font-bold">verify.</span>"
             </p>
             <p className="text-sm text-neutral-500 uppercase tracking-wider">
-              The Trustless Paradigm
+              EMBRACE THE NEW PARADIGM
             </p>
           </div>
         </div>

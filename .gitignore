@@ -26,5 +26,3 @@ dist-ssr
 CLAUDE
 CLAUDE.md
 .claude/
-
-src/assets/*
