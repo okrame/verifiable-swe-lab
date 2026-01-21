@@ -18,17 +18,21 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-primary via-primary-dark to-primary bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-primary-light to-accent bg-clip-text text-transparent;
   }
 
   .grid-pattern {
     background-image:
-      linear-gradient(rgba(251, 191, 36, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(251, 191, 36, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(141, 185, 203, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(141, 185, 203, 0.05) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 
   .glow {
-    box-shadow: 0 0 30px rgba(251, 191, 36, 0.2);
+    box-shadow: 0 0 30px rgba(141, 185, 203, 0.25), 0 0 60px rgba(212, 165, 116, 0.1);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 30px rgba(212, 165, 116, 0.25);
   }
 }

@@ -1,12 +1,12 @@
+import deibLogo from '../assets/deiblogo.png'
+
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 relative">
       <div className="max-w-5xl mx-auto text-center">
         <div className="mb-8 animate-fade-in">
-          <div className="inline-block px-4 py-2 border border-primary/30 rounded-full mb-6">
-            <span className="text-primary text-sm font-medium tracking-wider uppercase">
-              Politecnico di Milano
-            </span>
+          <div className="mx-auto border border-primary/30 rounded-full mb-6 overflow-hidden w-36 h-36 flex items-center justify-center">
+            <img src={deibLogo} alt="DEIB Polimi" className="w-full h-full object-cover" />
           </div>
         </div>
 
@@ -33,13 +33,13 @@ export default function Hero() {
         >
           <a
             href="#about"
-            className="px-8 py-4 bg-primary text-dark font-semibold rounded-lg hover:bg-primary-dark transition-all duration-300 hover:scale-105 glow"
+            className="px-8 py-4 bg-accent text-dark font-semibold rounded-lg hover:bg-accent-dark transition-all duration-300 hover:scale-105 glow-accent"
           >
             Explore Concepts
           </a>
           <a
             href="#technologies"
-            className="px-8 py-4 border border-primary/50 text-primary font-semibold rounded-lg hover:bg-primary/10 transition-all duration-300"
+            className="px-8 py-4 border border-primary/50 text-primary font-semibold rounded-lg hover:bg-primary/10 hover:border-primary transition-all duration-300"
           >
             View Technologies
           </a>

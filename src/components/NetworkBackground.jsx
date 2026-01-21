@@ -44,7 +44,7 @@ export default function NetworkBackground({ scrollY }) {
         // Draw node
         ctx.beginPath()
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(251, 191, 36, 0.4)'
+        ctx.fillStyle = 'rgba(141, 185, 203, 0.5)'
         ctx.fill()
 
         // Draw connections
@@ -57,7 +57,7 @@ export default function NetworkBackground({ scrollY }) {
             ctx.beginPath()
             ctx.moveTo(node.x, node.y)
             ctx.lineTo(otherNode.x, otherNode.y)
-            ctx.strokeStyle = `rgba(251, 191, 36, ${0.15 * (1 - distance / 150)})`
+            ctx.strokeStyle = `rgba(141, 185, 203, ${0.2 * (1 - distance / 150)})`
             ctx.lineWidth = 0.5
             ctx.stroke()
           }

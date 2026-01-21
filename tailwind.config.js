@@ -7,8 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#fbbf24', // amber-400
-        'primary-dark': '#f59e0b', // amber-500
+        primary: '#8db9cb', // DEIB institutional blue
+        'primary-light': '#a8cdd9',
+        'primary-dark': '#6a9bb0',
+        accent: '#d4a574', // warm complement for energy
+        'accent-dark': '#b8895d',
         dark: '#0a0a0a',
         'dark-lighter': '#171717',
         'dark-lightest': '#262626',

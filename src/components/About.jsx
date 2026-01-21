@@ -9,7 +9,7 @@ export default function About() {
               <br />
               <span className="text-gradient">Central Trust</span>
             </h2>
-            <div className="w-20 h-1 bg-primary mb-8"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mb-8"></div>
             <p className="text-lg text-neutral-300 leading-relaxed mb-6">
               Traditional systems rely on trusted intermediaries—banks, governments,
               corporations—to validate transactions and maintain records. This centralization
