@@ -1,31 +1,39 @@
-import { useState, useEffect } from 'react'
-import Hero from './components/Hero'
-import About from './components/About'
-import Principles from './components/Principles'
-import Technologies from './components/Technologies'
-import Footer from './components/Footer'
-import NetworkBackground from './components/NetworkBackground'
+import { useState } from 'react'
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
+import HomePage from './components/pages/HomePage'
+import ThesesPage from './components/pages/ThesesPage'
+import PeoplePage from './components/pages/PeoplePage'
+import PublicationsPage from './components/pages/PublicationsPage'
+import EventsPage from './components/pages/EventsPage'
+
+const PAGES = {
+  home: HomePage,
+  theses: ThesesPage,
+  people: PeoplePage,
+  publications: PublicationsPage,
+  events: EventsPage,
+}
 
 function App() {
-  const [scrollY, setScrollY] = useState(0)
+  const [currentPage, setCurrentPage] = useState('home')
 
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const PageComponent = PAGES[currentPage]
+
+  const handleNavigate = (page) => {
+    setCurrentPage(page)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <NetworkBackground scrollY={scrollY} />
+    <div className="min-h-screen flex flex-col">
+      <Header currentPage={currentPage} onNavigate={handleNavigate} />
 
-      <div className="relative z-10">
-        <Hero />
-        <About />
-        <Principles />
-        <Technologies />
-        <Footer />
-      </div>
+      <main className="flex-1">
+        <PageComponent />
+      </main>
+
+      <Footer onNavigate={handleNavigate} />
     </div>
   )
 }
