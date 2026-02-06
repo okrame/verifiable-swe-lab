@@ -8,7 +8,9 @@ const FACULTY = [
 
 const PHD_STUDENTS = [
   { name: 'Marco Esposito', institution: 'Politecnico di Milano', link: '#' },
+  { name: 'Andrea Rizzini', institution: 'Politecnico di Milano', link: '#' },
 ]
+
 
 const ALUMNI = [
   // Add alumni here
