@@ -17,7 +17,7 @@ export default function WelcomeSection() {
           Many VeriSWE projects are funded by European and national agencies as well as
           industry partners. Given the pervasiveness of these topics, our research involves
           multi-disciplinary collaborations with teams at Politecnico di Milano and
-          internationally
+          internationally.
         </p>
       </div>
     </section>
