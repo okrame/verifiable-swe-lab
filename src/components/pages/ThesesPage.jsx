@@ -15,6 +15,67 @@ const THESIS_AREAS = [
   },
 ]
 
+const PAST_THESES = [
+  {
+    title:
+      'Development of a pipeline for product logic management in 3D model configurators',
+    dateLabel: '23 Jul 2025',
+    url: 'https://www.politesi.polimi.it/handle/10589/239519',
+  },
+  {
+    title:
+      'Design and development of a circular economy blockchain-based digital marketplace for components reuse in mass electronics',
+    dateLabel: '3 Apr 2025',
+    url: 'https://www.politesi.polimi.it/handle/10589/236382',
+  },
+  {
+    title:
+      'ZK-KYC-DSIG: an eIDAS2 compliant privacy preserving identity verification framework via zero knowledge proof and digital signature',
+    dateLabel: '3 Apr 2025',
+    url: 'https://www.politesi.polimi.it/handle/10589/236413',
+  },
+  {
+    title:
+      'Virtuosity: how to incentivize the corporate sustainability through the activities of people and the use of blockchain',
+    dateLabel: '3 Apr 2025',
+    url: 'https://www.politesi.polimi.it/handle/10589/234036',
+  },
+  {
+    title:
+      'Private smart wallet: an erc-4337 blockchain wallet that enables privacy by default with proof of innocence',
+    dateLabel: '11 Dec 2024',
+    url: 'https://www.politesi.polimi.it/handle/10589/231692',
+  },
+  {
+    title:
+      'zkCF wallet: enhancing privacy and compliance in blockchain transaction with zero-knowledge proofs and eIDAS digital signature',
+    dateLabel: '11 Dec 2024',
+    url: 'https://www.politesi.polimi.it/handle/10589/231434',
+  },
+  {
+    title:
+      'From email data to verifiable credential: a zk-SNARK-based framework for university enrollment verification',
+    dateLabel: '11 Dec 2024',
+    url: 'https://www.politesi.polimi.it/handle/10589/231242',
+  },
+  {
+    title: 'Real-time forensics analysis tool for bitcoin transactions: a heuristic approach',
+    dateLabel: '16 Jul 2024',
+    url: 'https://www.politesi.polimi.it/handle/10589/222012',
+  },
+  {
+    title: 'Decentralized updates of IoT and edge devices',
+    dateLabel: '9 Apr 2024',
+    url: 'https://www.politesi.polimi.it/handle/10589/218694',
+  },
+  {
+    title:
+      'Cognitive oracles: validity machine learning via SNARKs for provable on-chain assessment',
+    dateLabel: '9 Apr 2024',
+    url: 'https://www.politesi.polimi.it/handle/10589/218560',
+  },
+]
+
 export default function ThesesPage() {
   return (
     <div className="py-16 px-6">
@@ -55,6 +116,31 @@ export default function ThesesPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 space-y-6">
+          <h2 className="font-display text-2xl font-bold text-foreground">
+            Past Theses
+          </h2>
+          <div className="border border-border rounded-xl p-6">
+            <ul className="space-y-3">
+              {PAST_THESES.map((thesis) => (
+                <li key={thesis.url} className="text-foreground">
+                  <div className="text-sm text-foreground-subtle mb-1">
+                    {thesis.dateLabel}
+                  </div>
+                  <a
+                    href={thesis.url}
+                    className="text-primary hover:underline"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {thesis.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="mt-12 text-center bg-background-alt border border-border rounded-xl p-8">
